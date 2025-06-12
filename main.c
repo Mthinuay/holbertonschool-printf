@@ -1,22 +1,40 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ * Return: Always 0
+ */
 int main(void)
 {
-	int len;
+	int len1, len2;
 
-	len = _printf("Character: %c\n", A);
-	_printf("Length: %d\n", len);
+	_printf("Hello, %s!\n", "world");
+	printf("Hello, %s!\n", "world");
 
-	len = _printf("String: %s\n", "Hello, Holberton!");
-	_printf("Length: %d\n", len);
+	_printf("Character: %c\n", 'A');
+	printf("Character: %c\n", 'A');
 
-	len = _printf("Percent: %%\n");
-	_printf("Length: %d\n", len);
+	_printf("String: %s\n", "This is a string");
+	printf("String: %s\n", "This is a string");
 
-	len = _printf("Unknown: %r\n"); // should print %r
-	_printf("Length: %d\n", len);
+	_printf("Percent sign: %%\n");
+	printf("Percent sign: %%\n");
+
+	len1 = _printf("Integer: %d\n", 12345);
+	len2 = printf("Integer: %d\n", 12345);
+	printf("My _printf returned: %d\n", len1);
+	printf("Standard printf returned: %d\n", len2);
+
+	len1 = _printf("Negative integer: %i\n", -987);
+	len2 = printf("Negative integer: %i\n", -987);
+	printf("My _printf returned: %d\n", len1);
+	printf("Standard printf returned: %d\n", len2);
+
+	len1 = _printf("Zero: %d\n", 0);
+	len2 = printf("Zero: %d\n", 0);
+	printf("My _printf returned: %d\n", len1);
+	printf("Standard printf returned: %d\n", len2);
 
 	return (0);
 }
-
